@@ -36,8 +36,6 @@ class ShapeOverlays {
         this.elm.classList.remove('is-opened');
         this.timeStart = Date.now();
         this.renderLoop();
-        this.elm.style.width = "0";
-        this.elm.style.height = "0";
     }
     updatePath(time) {
         const points = [];
@@ -77,6 +75,10 @@ class ShapeOverlays {
             });
         } else {
             this.isAnimating = false;
+            if (this.isOpened === false) {
+                this.elm.style.width = "0";
+                this.elm.style.height = "0";
+            }
         }
     }
 }
