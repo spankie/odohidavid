@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: odohidavid
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: odohidavid
+  template:
+    metadata:
+      labels:
+        app: odohidavid
+    spec:
+      containers:
+      - name: odohidavid
+        image: gcr.io/my-project-1497620302577/odohidavid
+        ports:
+        - containerPort: 3333
