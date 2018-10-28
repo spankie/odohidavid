@@ -116,6 +116,10 @@ body {
     color: var(--color-menu-hover);
 }
 
+.shape-overlays.is-opened {
+    z-index: 40;
+}
+
 .global-menu__item.is-opened {
     opacity: 1;
     transform: translateY(0) rotate(0);
